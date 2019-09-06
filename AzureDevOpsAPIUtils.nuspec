@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Required elements-->
+        <id>AzureDevOpsAPIUtils</id>
+        <version>$version$</version>
+        <authors>Michael Megel</authors>
+        <owners>Michael Megel</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Azure DevOps Rest API Utils</description>
+    </metadata>
+    <files>
+        <file src=".\**\*.*"/>
+    </files>
+</package>
