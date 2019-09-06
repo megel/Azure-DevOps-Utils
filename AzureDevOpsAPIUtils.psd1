@@ -12,7 +12,7 @@
 RootModule = 'AzureDevOpsAPIUtils.psm1'
 
 # Die Versionsnummer dieses Moduls
-ModuleVersion = '0.2.0'
+ModuleVersion = '0.2.1'
 
 # Unterstützte PSEditions
 # CompatiblePSEditions = @()
@@ -70,10 +70,12 @@ Description = 'Azure DevOps API Utils Library'
 
 # Aus diesem Modul zu exportierende Funktionen. Um optimale Leistung zu erzielen, verwenden Sie keine Platzhalter und löschen den Eintrag nicht. Verwenden Sie ein leeres Array, wenn keine zu exportierenden Funktionen vorhanden sind.
 FunctionsToExport = 'Add-AzureDevOpsAgentPool', 'Add-AzureDevOpsDeploymentGroup', 
+               'Add-AzureDevOpsVariableGroup', 
                'Get-AzureDevOpsAgentInstallParameters', 
                'Get-AzureDevOpsAgentPools', 'Get-AzureDevOpsAgents', 
                'Get-AzureDevOpsAgentUnInstallParameters', 
-               'Get-AzureDevOpsDeploymentGroups', 'Remove-AzureDevOpsAgent'
+               'Get-AzureDevOpsDeploymentGroups', 'Get-AzureDevOpsVariableGroups', 
+               'Remove-AzureDevOpsAgent', 'Update-AzureDevOpsVariableGroup'
 
 # Aus diesem Modul zu exportierende Cmdlets. Um optimale Leistung zu erzielen, verwenden Sie keine Platzhalter und löschen den Eintrag nicht. Verwenden Sie ein leeres Array, wenn keine zu exportierenden Cmdlets vorhanden sind.
 CmdletsToExport = @()
@@ -111,7 +113,10 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        ReleaseNotes = '0.2.0
+        ReleaseNotes = '0.2.1
+Exported Functions & Aliases fixed
+
+0.2.0
 Functions for Azure DevOps Variable Groups added
 Function Alias added
 
