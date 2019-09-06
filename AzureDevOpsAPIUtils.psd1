@@ -9,10 +9,10 @@
 @{
 
 # Die diesem Manifest zugeordnete Skript- oder Binärmoduldatei.
-RootModule = 'c:\temp\AzureDevOpsAPIUtils\AzureDevOpsAPIUtils.psm1'
+RootModule = 'AzureDevOpsAPIUtils.psm1'
 
 # Die Versionsnummer dieses Moduls
-ModuleVersion = '0.1.0.0'
+ModuleVersion = '0.1.2'
 
 # Unterstützte PSEditions
 # CompatiblePSEditions = @()
@@ -70,7 +70,8 @@ Description = 'Azure DevOps API Utils Library'
 
 # Aus diesem Modul zu exportierende Funktionen. Um optimale Leistung zu erzielen, verwenden Sie keine Platzhalter und löschen den Eintrag nicht. Verwenden Sie ein leeres Array, wenn keine zu exportierenden Funktionen vorhanden sind.
 FunctionsToExport = 'Add-AzureDevOpsAgentPool', 'Add-AzureDevOpsDeploymentGroup', 
-               'Get-AzureDevOpsAgentInstallParameters', 'Get-AzureDevOpsAgents', 
+               'Get-AzureDevOpsAgentInstallParameters', 
+               'Get-AzureDevOpsAgentPools', 'Get-AzureDevOpsAgents', 
                'Get-AzureDevOpsAgentUnInstallParameters', 
                'Get-AzureDevOpsDeploymentGroups', 'Remove-AzureDevOpsAgent'
 
@@ -110,7 +111,13 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        ReleaseNotes = '0.1.0.0
+        ReleaseNotes = '0.1.2
+Wrong Export Name for function fixed
+
+0.1.1
+Module Fixed
+
+0.1.0
 Initial releases 
 use help on the individual functions to get info.'
 

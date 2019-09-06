@@ -4,8 +4,10 @@
         <!-- Required elements-->
         <id>AzureDevOpsAPIUtils</id>
         <version>$version$</version>
-        <description>Azure DevOps Rest API Utils</description>
         <authors>Michael Megel</authors>
+        <owners>Michael Megel</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Azure DevOps Rest API Utils</description>
     </metadata>
     <files>
         <file src=".\**\*.*"/>
