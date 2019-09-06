@@ -12,4 +12,5 @@ function Get-AzureDevOpsAgentUnInstallParameters {
         return $([string]::Join(" ", $parameters))
     }
 }
-Export-ModuleMember -Function Get-AzureDevOpsAgentUnInstallParameters
+Set-Alias -Name Get-AgentUnInstallParams -Value Get-AzureDevOpsAgentUnInstallParameters
+Export-ModuleMember -Function Get-AzureDevOpsAgentUnInstallParameters -Alias Get-AgentUnInstallParams
