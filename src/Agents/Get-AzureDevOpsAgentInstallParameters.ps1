@@ -49,4 +49,5 @@ function Get-AzureDevOpsAgentInstallParameters {
         return $([string]::Join(" ", $parameters))
     }
 }
-Export-ModuleMember -Function Get-AzureDevOpsAgentInstallParameters
+Set-Alias -Name Get-AgentInstallParams -Value Get-AzureDevOpsAgentInstallParameters
+Export-ModuleMember -Function Get-AzureDevOpsAgentInstallParameters -Alias Get-AgentInstallParams

@@ -1,0 +1,6 @@
+0.1.1.0
+Module Fixed
+
+0.1.0.0
+Initial releases 
+use help on the individual functions to get info.

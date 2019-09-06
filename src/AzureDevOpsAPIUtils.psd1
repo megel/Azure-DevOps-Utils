@@ -4,7 +4,7 @@
     RootModule = 'AzureDevOpsAPIUtils.psm1'
     
     # Version number of this module.
-    ModuleVersion = '0.1.0.0'
+    ModuleVersion = '0.1.1.0'
     
     # ID used to uniquely identify this module
     GUID = '66a31504-768a-468a-a4cc-c8c35bc98b0b'
@@ -53,7 +53,11 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        ReleaseNotes = '0.1.0.0 Initial Version'
+        ReleaseNotes = '0.1.1.0
+Module Fixed
+
+0.1.0.0 
+Initial Version'
 
     } # End of PSData hashtable
 
