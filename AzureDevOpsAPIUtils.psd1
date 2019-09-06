@@ -12,7 +12,7 @@
 RootModule = 'AzureDevOpsAPIUtils.psm1'
 
 # Die Versionsnummer dieses Moduls
-ModuleVersion = '0.2.1'
+ModuleVersion = '0.2.2'
 
 # Unterstützte PSEditions
 # CompatiblePSEditions = @()
@@ -113,7 +113,10 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        ReleaseNotes = '0.2.1
+        ReleaseNotes = '0.2.2
+Package URLs (project and license) added
+
+0.2.1
 Exported Functions & Aliases fixed
 
 0.2.0
