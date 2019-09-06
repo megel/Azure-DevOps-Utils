@@ -20,4 +20,5 @@ function Remove-AzureDevOpsAgent {
         }
     }
 }
-Export-ModuleMember -Function Remove-AzureDevOpsAgent
+Set-Alias -Name Remove-AzureDevOpsAgent -Value Remove-DevOpsAgent
+Export-ModuleMember -Function Remove-AzureDevOpsAgent -Alias Remove-DevOpsAgent

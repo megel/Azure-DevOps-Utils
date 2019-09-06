@@ -15,4 +15,5 @@ function Add-AzureDevOpsAgentPool {
         return ((Invoke-WebRequest -Method Post -Body $body -uri $uri -Headers $headers -UseBasicParsing).Content | ConvertFrom-Json)
     }
 }
-Export-ModuleMember -Function Add-AzureDevOpsAgentPool
+Set-Alias -Name Add-AzureDevOpsAgentPool -Value Add-DevOpsAgentPool
+Export-ModuleMember -Function Add-AzureDevOpsAgentPool -Alias Add-DevOpsAgentPool

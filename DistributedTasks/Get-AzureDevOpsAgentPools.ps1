@@ -11,4 +11,5 @@ function Get-AzureDevOpsAgentPools {
         return ((Invoke-WebRequest -uri $uri -Headers $headers -UseBasicParsing).Content | ConvertFrom-Json).value
     }
 }
-Export-ModuleMember -Function Get-AzureDevOpsAgentPools
+Set-Alias -Name Get-AzureDevOpsAgentPools -Value Get-DevOpsAgentPools
+Export-ModuleMember -Function Get-AzureDevOpsAgentPools -Alias Get-DevOpsAgentPools

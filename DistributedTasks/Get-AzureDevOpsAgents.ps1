@@ -12,4 +12,5 @@ function Get-AzureDevOpsAgents {
         return  ((Invoke-WebRequest -uri $uri -Headers $headers -UseBasicParsing).Content | ConvertFrom-Json).value
     }
 }
-Export-ModuleMember -Function Get-AzureDevOpsAgents
+Set-Alias -Name Get-AzureDevOpsAgents -Value Get-DevOpsAgents
+Export-ModuleMember -Function Get-AzureDevOpsAgents -Alias Get-DevOpsAgents

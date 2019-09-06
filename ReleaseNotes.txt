@@ -1,3 +1,7 @@
+0.2.0
+Functions for Azure DevOps Variable Groups added
+Function Alias added
+
 0.1.2
 Wrong Export Name for function fixed
 

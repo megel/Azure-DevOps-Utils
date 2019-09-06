@@ -18,4 +18,5 @@ function Add-AzureDevOpsDeploymentGroup {
         return $group
     }
 }
-Export-ModuleMember -Function Add-AzureDevOpsDeploymentGroup
+Set-Alias -Name Add-AzureDevOpsDeploymentGroup -Value Add-DevOpsDeploymentGroup
+Export-ModuleMember -Function Add-AzureDevOpsDeploymentGroup -Alias Add-DevOpsDeploymentGroup
