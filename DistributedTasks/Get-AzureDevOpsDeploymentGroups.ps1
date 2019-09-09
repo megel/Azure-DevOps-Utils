@@ -12,5 +12,5 @@ function Get-AzureDevOpsDeploymentGroups {
         return  ((Invoke-WebRequest -uri $uri -Headers $headers -UseBasicParsing).Content | ConvertFrom-Json).value
     }
 }
-Set-Alias -Name Get-AzureDevOpsGetDeploymentGroups -Value Get-DevOpsDeploymentGroups
-Export-ModuleMember -Function Get-AzureDevOpsDeploymentGroups -Alias Get-DevOpsDeploymentGroups
+#Set-Alias -Name Get-AzureDevOpsGetDeploymentGroups -Value Get-DevOpsDeploymentGroups
+Export-ModuleMember -Function Get-AzureDevOpsDeploymentGroups #-Alias Get-DevOpsDeploymentGroups

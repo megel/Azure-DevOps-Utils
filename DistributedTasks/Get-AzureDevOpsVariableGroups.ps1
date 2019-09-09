@@ -12,5 +12,5 @@ function Get-AzureDevOpsVariableGroups {
         return  ((Invoke-WebRequest -uri $uri -Headers $headers -UseBasicParsing).Content | ConvertFrom-Json).value
     }
 }
-Set-Alias -Name Get-AzureDevOpsVariableGroups -Value Get-DevOpsVariableGroups
-Export-ModuleMember -Function Get-AzureDevOpsVariableGroups -Alias Get-DevOpsVariableGroups
+#Set-Alias -Name Get-AzureDevOpsVariableGroups -Value Get-DevOpsVariableGroups
+Export-ModuleMember -Function Get-AzureDevOpsVariableGroups #-Alias Get-DevOpsVariableGroups

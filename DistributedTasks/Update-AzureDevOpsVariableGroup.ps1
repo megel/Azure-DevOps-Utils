@@ -41,5 +41,5 @@ function Update-AzureDevOpsVariableGroup {
         return $group
     }
 }
-Set-Alias -Name Update-AzureDevOpsVariableGroup -Value Update-DevOpsVariableGroup
-Export-ModuleMember -Function Update-AzureDevOpsVariableGroup -Alias Update-DevOpsVariableGroup
+#Set-Alias -Name Update-AzureDevOpsVariableGroup -Value Update-DevOpsVariableGroup
+Export-ModuleMember -Function Update-AzureDevOpsVariableGroup #-Alias Update-DevOpsVariableGroup

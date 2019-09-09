@@ -39,5 +39,5 @@ function Add-AzureDevOpsVariableGroup {
         return $group
     }
 }
-Set-Alias -Name Add-AzureDevOpsVariableGroup -Value Add-DevOpsVariableGroup
-Export-ModuleMember -Function Add-AzureDevOpsVariableGroup -Alias Add-DevOpsVariableGroups
+#Set-Alias -Name Add-AzureDevOpsVariableGroup -Value Add-DevOpsVariableGroup
+Export-ModuleMember -Function Add-AzureDevOpsVariableGroup #-Alias Add-DevOpsVariableGroups
