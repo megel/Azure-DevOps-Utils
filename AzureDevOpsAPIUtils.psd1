@@ -3,7 +3,7 @@
 #
 # Generiert von: Michael Megel
 #
-# Generiert am: 06.09.2019
+# Generiert am: 09.09.2019
 #
 
 @{
@@ -12,7 +12,7 @@
 RootModule = 'AzureDevOpsAPIUtils.psm1'
 
 # Die Versionsnummer dieses Moduls
-ModuleVersion = '0.2.2'
+ModuleVersion = '0.2.3'
 
 # Unterstützte PSEditions
 # CompatiblePSEditions = @()
@@ -113,7 +113,10 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        ReleaseNotes = '0.2.2
+        ReleaseNotes = '0.2.3
+New parameter added ''deploymentGroupTags'' to Get-AzureDevOpsAgentInstallParameters
+
+0.2.2
 Package URLs (project and license) added
 
 0.2.1

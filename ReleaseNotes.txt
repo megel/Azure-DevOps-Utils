@@ -1,3 +1,6 @@
+0.2.3
+New parameter added 'deploymentGroupTags' to Get-AzureDevOpsAgentInstallParameters
+
 0.2.2
 Package URLs (project and license) added
 

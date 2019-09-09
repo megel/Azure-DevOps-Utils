@@ -1,3 +1,36 @@
+<#
+.SYNOPSIS
+Generate a set of parameter for CI Agent or Deployment Agent
+.DESCRIPTION
+Generate a set of parameter see also: https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/v2-windows?view=azure-devops
+.PARAMETER poolName
+Name of the Pool
+.PARAMETER deploymentGroup
+Name of the Deployment Group
+.PARAMETER projectName
+Name of the Azure DevOps Project
+.PARAMETER deploymentGroupTags
+Optional Tags for the Agent, if it is used as a deployment group agent
+.PARAMETER agentName
+Name of the agent
+.PARAMETER organizationUri
+Uri of your Azure DevOps organization.
+.PARAMETER vstsToken
+VSTS-Token to use PAT authentication.
+.PARAMETER runasservice
+Add the agent as service.
+.PARAMETER credential
+Optional Credentials for Service Registration
+.EXAMPLE
+Install Agent at a Deployment Pool:
+Get-AzureDevOpsAgentInstallParameters -deploymentGroup $poolName -projectName $projectName -organizationUri $devOpsURL -vstsToken $vstsToken -agentName $containerName -credential $credential -runasservice
+
+Install Agent at an Agent Pool:
+Get-AzureDevOpsAgentInstallParameters -poolName $pool.name -organizationUri $devOpsURL -vstsToken $vstsToken -agentName $containerName -credential $credential -runasservice
+.NOTES
+General notes
+#>
+
 function Get-AzureDevOpsAgentInstallParameters {
     param (
         # -- Agent Pool -------
@@ -5,6 +38,7 @@ function Get-AzureDevOpsAgentInstallParameters {
         # -- Deployment Pool --
         [string]$deploymentGroup  = "",
         [string]$projectName      = "",
+        [string[]]$deploymentGroupTags = $null,
         # ---------------------
         [string]$agentName        = "",
         [string]$organizationUri,
@@ -35,6 +69,12 @@ function Get-AzureDevOpsAgentInstallParameters {
                 "--projectname ""$projectName""",
                 "--replace"
             )
+            if ($null -ne $deploymentGroupTags) {
+                $parameters += @(
+                    "--addDeploymentGroupTags",
+                    "--deploymentGroupTags ""$([string]::Join(",", $deploymentGroupTags))"""
+                )
+            }
         } else {
             Write-Warning "Incomplete parameters for Pool (poolName) or Deployment Group (deploymentGroup and projectName)"
         }
