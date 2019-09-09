@@ -12,7 +12,7 @@
 RootModule = 'AzureDevOpsAPIUtils.psm1'
 
 # Die Versionsnummer dieses Moduls
-ModuleVersion = '0.2.3'
+ModuleVersion = '0.2.4'
 
 # Unterstützte PSEditions
 # CompatiblePSEditions = @()
@@ -113,7 +113,10 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        ReleaseNotes = '0.2.3
+        ReleaseNotes = '0.2.4
+Minor improvements to Get-AzureDevOpsAgentInstallParameters (unattended installation, replace agent)
+
+0.2.3
 New parameter added ''deploymentGroupTags'' to Get-AzureDevOpsAgentInstallParameters
 
 0.2.2

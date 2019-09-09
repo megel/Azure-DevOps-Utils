@@ -48,13 +48,14 @@ function Get-AzureDevOpsAgentInstallParameters {
     )
     Process {
         $parameters = @(
-            #"--unattended",
+            "--unattended",
             "--agent ""$agentName""",
             "--url ""$organizationUri""",
             "--auth PAT",
             "--token $vstsToken",
             "--acceptTeeEula",
-            "--noRestart"
+            "--noRestart",
+            "--replace"
             )
         if ($runasservice) {
             $parameters += @("--runasservice")
@@ -66,8 +67,7 @@ function Get-AzureDevOpsAgentInstallParameters {
                 "--deploymentgroup", 
                 "--deploymentgroupname ""$deploymentGroup""", 
                 "--work ""_work""",
-                "--projectname ""$projectName""",
-                "--replace"
+                "--projectname ""$projectName"""
             )
             if ($null -ne $deploymentGroupTags) {
                 $parameters += @(
