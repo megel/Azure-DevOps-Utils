@@ -69,7 +69,7 @@ function Get-AzureDevOpsAgentInstallParameters {
                 "--work ""_work""",
                 "--projectname ""$projectName"""
             )
-            if ($null -ne $deploymentGroupTags) {
+            if ($null -ne $deploymentGroupTags -and $deploymentGroupTags.Count -gt 0) {
                 $parameters += @(
                     "--addDeploymentGroupTags",
                     "--deploymentGroupTags ""$([string]::Join(",", $deploymentGroupTags))"""
